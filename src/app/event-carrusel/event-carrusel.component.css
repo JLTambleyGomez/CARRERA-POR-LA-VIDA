@@ -1,8 +1,10 @@
   
   .e-carousel {
     position: relative;
-    max-width: 600px;
+    width: 100%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin-top:18%;
   }
   
@@ -98,6 +100,6 @@
   }
   
   .transition {
-    transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.26s ease-in-out;
   }
   

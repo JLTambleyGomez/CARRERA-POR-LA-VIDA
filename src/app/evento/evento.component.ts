@@ -12,7 +12,7 @@ import { EventoMenuComponent } from '../evento-menu/evento-menu.component';
 })
 export class EventoComponent {
 
-  showMenu:boolean=false
+  showMenu:boolean=true
 
 
 handleShowMenu(){
