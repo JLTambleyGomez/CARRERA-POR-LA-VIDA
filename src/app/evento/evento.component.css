@@ -55,15 +55,15 @@
 
   .e-d-kmts{
     font-size: 1.4em;
-    margin-bottom: -0.5em;
-    margin-top: -0.01em;
+    margin-bottom: -0em;
+    margin-top: -0em;
     font-family:'Dancing Script', cursive;
 }
   .e-d-description{
     font-family:'Dancing Script', cursive;
     font-size: 13px;
   font-weight: 500;
-  margin-bottom: -1.2em;
+  margin-bottom: -0em;
   }
   .e-d-price{
     font-size: 17px;
