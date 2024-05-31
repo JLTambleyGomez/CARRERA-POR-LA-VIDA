@@ -34,38 +34,40 @@
   .e-distance-cards{
     display: flex;
     width: 100%;
-    height: 140px;  
     justify-content: space-around;
     flex-direction: row;
+    height: 140px;
+
   }
-  .e-distance-card{
-    position: relative;
+  .e-distance-card {
+    border-radius: 10px;
+
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
-    border-radius:5px;
-    width:31%;
-    color: rgb(153,153,153);
-    height: 140px;  
-    background-color: rgb(238,238,238)
-  } 
+    justify-content: space-between; /* Ajusta el espacio entre los elementos */
+    width: 31%;
+    height: 130px;
+    color: rgb(153, 153, 153);
+    background-color: rgb(238, 238, 238);
+}
 
   .e-d-kmts{
-    position: absolute;
-    top: -15%;
+    font-size: 1.4em;
+    margin-bottom: -0.5em;
+    margin-top: -0.05em;
     font-family:'Dancing Script', cursive;
 }
   .e-d-description{
     font-family:'Dancing Script', cursive;
     font-size: 13px;
-  position: absolute;
-  top: 20%;
   font-weight: 500;
+  margin-bottom: -1.5em;
   }
   .e-d-price{
-    position: absolute;
     font-size: 17px;
-    bottom: -10%;
+    font-weight: bolder;
   }
 
   .e-inscriptions{
