@@ -1,0 +1,51 @@
+
+.e-menu-contain{
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.685);
+    backdrop-filter: blur(10px);
+}
+
+.e.m-user1{
+    display: flex;
+    flex-direction: column;
+}
+
+.e-m-subcontain{
+    position: absolute;
+    left: 0;
+    top: 0.1%;
+    right: 15%;
+    bottom:0;
+    background-color: white;
+}
+
+.e-m-user{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #EEEEEE;
+    padding-left: 10%;
+    height: 15%;
+    gap: 10%;
+
+}
+.e-m-img{
+    width:20%;
+}
+
+.e-m-gret{
+    display: flex;
+    width: 30px;
+
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.e-m-leave{
+    width: 10%;
+}

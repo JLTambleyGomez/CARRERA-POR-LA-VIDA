@@ -1,0 +1,19 @@
+<div class="e-carousel">
+    <button (click)="previousSlide()">&#10094;</button>
+    <div class="e-carousel-slides">
+      <div class="e-carousel-slide e-carousel-slide-prev" *ngIf="slides.length > 1" [ngClass]="{'transition': true}" [style.backgroundImage]="'url(' + slides[(currentSlide - 1 + slides.length) % slides.length].src + ')'">
+        <span class="e-carousel-price">{{ slides[(currentSlide - 1 + slides.length) % slides.length].price }}</span>
+      </div>
+      <div class="e-carousel-slide e-carousel-slide-current" [ngClass]="{'transition': true}" [style.backgroundImage]="'url(' + slides[currentSlide].src + ')'">
+        <span class="e-carousel-price">{{ slides[currentSlide].price }}</span>
+      </div>
+      <div class="e-carousel-slide e-carousel-slide-next" *ngIf="slides.length > 1" [ngClass]="{'transition': true}" [style.backgroundImage]="'url(' + slides[(currentSlide + 1) % slides.length].src + ')'">
+        <span class="e-carousel-price">{{ slides[(currentSlide + 1) % slides.length].price }}</span>
+      </div>
+    </div>
+    <button (click)="nextSlide()">&#10095;</button>
+  </div>
+
+  <div class="e-dots">
+    <span *ngFor="let slide of slides; let i = index" class="e-dot" [class.active]="i === currentSlide" (click)="goToSlide(i)"></span>
+  </div>
