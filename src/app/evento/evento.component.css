@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: space-between; /* Ajusta el espacio entre los elementos */
     width: 31%;
-    height: 130px;
+    height: 150px;
     color: rgb(153, 153, 153);
     background-color: rgb(238, 238, 238);
 }
@@ -56,14 +56,14 @@
   .e-d-kmts{
     font-size: 1.4em;
     margin-bottom: -0.5em;
-    margin-top: -0.05em;
+    margin-top: -0.01em;
     font-family:'Dancing Script', cursive;
 }
   .e-d-description{
     font-family:'Dancing Script', cursive;
     font-size: 13px;
   font-weight: 500;
-  margin-bottom: -1.5em;
+  margin-bottom: -1.2em;
   }
   .e-d-price{
     font-size: 17px;
