@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="header">
+    <button class="back-button"></button>
+    <h2>Formulario de mi inscripción</h2>
+  </div>
+  <div class="content">
+    <p class="intro-text">¿Listo para el desafío de {{selectedDistance}}K?<br>Completa el formulario y únete a la carrera por la vida.</p>
+    <div class="section" [ngClass]="{ 'complete': datosDelParticipante === 'completo', 'incomplete': datosDelParticipante === 'incompleto' }">
+      <div class="section-header">
+        <span>Datos del participante</span>
+        <span (click)="handleDatosDelPaticipante()" class="status">{{ datosDelParticipante === 'completo' ? 'Completo' : 'Completar' }}</span>
+      </div>
+      <p>Información del participante</p>
+    </div>
+    <div class="section" [ngClass]="{ 'complete': kitDeportivo === 'completo', 'incomplete': kitDeportivo === 'incompleto' }">
+      <div class="section-header">
+        <span>Kit deportivo</span>
+        <span (click)="handleKitDeportivo()" class="status">{{ kitDeportivo === 'completo' ? 'Completo' : 'Completar' }}</span>
+      </div>
+      <p>Información del kit deportivo</p>
+    </div>
+    <div class="section" [ngClass]="{ 'complete': productosOpcionales === 'completo', 'incomplete': productosOpcionales === 'incompleto' }">
+      <div class="section-header">
+        <span>Añade productos (opcional)</span>
+        <span (click)="handleAgregarProductos()" class="status">{{ productosOpcionales === 'completo' ? 'Completo' : 'Completar' }}</span>
+      </div>
+      <p>Recuerda que tu inscripción incluye kit deportivo</p>
+    </div>
+    <div class="section" [ngClass]="{ 'complete': preguntasDePatrocinadores === 'completo', 'incomplete': preguntasDePatrocinadores === 'incompleto' }">
+      <div class="section-header">
+        <span>Preg patrocinadores</span>
+        <span (click)="handlePreguntasPatrocinadores()" class="status">{{ preguntasDePatrocinadores === 'completo' ? 'Completo' : 'Completar' }}</span>
+      </div>
+      <p>Información de las preguntas</p>
+    </div>
+  </div>
+  <div class="buttoncontain">
+  <button class="continue-button" [disabled]="!isFormComplete" [ngClass]="{ 'disabled': !isFormComplete, 'active': isFormComplete }" (click)="continueWithPayment()">Continuar con el pago</button>
+</div></div>

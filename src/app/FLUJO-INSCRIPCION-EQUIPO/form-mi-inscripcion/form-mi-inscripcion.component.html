@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="header">
+      <span (click)="back()" class="back-arrow">&lt;</span>
+      <span class="title">Datos del participante</span>
+      <span (click)="back()" class="close-button">&times;</span>
+    </div>
+    <div class="content">
+      <form [formGroup]="participanteForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Nombre completo:</label>
+          <input type="text" id="name" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="documentType">Tipo de documento:</label>
+          <select id="documentType" formControlName="documentType">
+            <option value="CC">C.C.</option>
+            <option value="TI">T.I.</option>
+            <option value="CE">C.E.</option>
+            <option value="Passport">Pasaporte</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="documentNumber">Número de documento:</label>
+          <input type="text" id="documentNumber" formControlName="documentNumber">
+        </div>
+        <div class="form-group">
+          <label for="birthDate">Fecha de nacimiento:</label>
+          <input type="text" id="birthDate" formControlName="birthDate" placeholder="DD/MM/YYYY">
+        </div>
+        <div class="form-group">
+          <label for="gender">Género:</label>
+          <select id="gender" formControlName="gender">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="country">País:</label>
+          <select id="country" formControlName="country">
+            <option value="Colombia">Colombia</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">Departamento:</label>
+          <select id="state" formControlName="state">
+            <option value="Quindío">Quindío</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">Ciudad:</label>
+          <select id="city" formControlName="city">
+            <option value="Armenia">Armenia</option>
+            <option value="Calarcá">Calarcá</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección de residencia:</label>
+          <input type="text" id="address" formControlName="address">
+        </div>
+        <div class="form-group">
+          <label for="eps">Eps:</label>
+          <select id="eps" formControlName="eps">
+            <option value="Sura">Sura</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rh">RH:</label>
+          <select id="rh" formControlName="rh">
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group terms">
+          <input type="checkbox" id="termsAccepted" formControlName="termsAccepted">
+          <label (click)="terms()" for="termsAccepted">Acepto los términos y condiciones (ver)</label>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-button" [ngClass]="{'disabled': !participanteForm.get('termsAccepted')?.value}" [disabled]="!participanteForm.get('termsAccepted')?.value">Aceptar</button>
+          <div *ngIf="!participanteForm.valid && (participanteForm.dirty || participanteForm.touched)" class="error-message">
+            Por favor, complete todos los campos correctamente.
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

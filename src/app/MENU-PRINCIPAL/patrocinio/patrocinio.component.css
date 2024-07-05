@@ -1,0 +1,96 @@
+.container {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    width: 600px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .back-arrow {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .title {
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center; /* Center the title */
+    font-size: 20px;
+
+  }
+  
+  .content {
+    padding: 20px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sponsorship-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
+  }
+  
+  .sponsorship-description p {
+    margin: 5px 0;
+    text-align: center; /* Center align the text */
+  }
+  
+  .plans {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .plan {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .plan:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sponsorship-footer p {
+    margin: 5px 0;
+    text-align: center; /* Center align the text */
+  }
+  
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .cta-button {
+    display: block;
+    width: auto;
+    background: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+  
+      max-width: 400px;
+    }
+    }

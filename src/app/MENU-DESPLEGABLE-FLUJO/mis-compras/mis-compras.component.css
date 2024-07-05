@@ -1,0 +1,90 @@
+.mis-compras-container,
+.purchase-detail-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header h2 {
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.purchase-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.purchase-item:hover {
+  background-color: #f0f0f0;
+}
+
+.purchase-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.purchase-details {
+  flex-grow: 1;
+}
+
+.purchase-details p {
+  margin: 0;
+}
+
+.purchase-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-detail h3 {
+  margin: 10px 0 5px;
+}
+
+.purchase-detail ul {
+  list-style: none;
+  padding: 0;
+}
+
+.purchase-detail li {
+  margin-bottom: 5px;
+}
+
+.pse-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}

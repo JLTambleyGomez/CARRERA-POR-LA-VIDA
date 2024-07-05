@@ -1,0 +1,46 @@
+<div class="preguntas-container">
+    <button class="back-button" (click)="goBack()">&#8592;</button>
+    <button class="close-button" (click)="close()">&#10005;</button>
+    <h2 class="question">Preguntas patrocinadores</h2>
+  
+    <form [formGroup]="preguntasForm" (ngSubmit)="onSubmit()">
+      <div class="pregunta">
+        <label for="caracteristicasZapatos">Características más importantes para elegir zapatos</label>
+        <input id="caracteristicasZapatos" formControlName="caracteristicasZapatos" type="text">
+      </div>
+  
+      <div class="pregunta">
+        <label for="tenisCarrera">¿Qué tenis voy a usar el día de la carrera?</label>
+        <input id="tenisCarrera" formControlName="tenisCarrera" type="text">
+      </div>
+  
+      <div class="pregunta">
+        <label for="otraPregunta">Otra, ¿cuál?</label>
+        <input id="otraPregunta" formControlName="otraPregunta" type="text">
+      </div>
+  
+      <div class="button-group">
+        <button type="submit" class="submit-button">Aceptar</button>
+        <button type="button" class="omit-button" (click)="omit()">Omitir</button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Modal de confirmación -->
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <h2>Confirmación</h2>
+      <p>Respuestas guardadas correctamente</p>
+      <button (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+  
+  <!-- Modal de formulario incompleto -->
+  <div class="modal" *ngIf="showIncompleteModal">
+    <div class="modal-content">
+      <h2>Advertencia</h2>
+      <p>Debes responder las preguntas</p>
+      <button (click)="closeIncompleteModal()">Cerrar</button>
+    </div>
+  </div>
+  

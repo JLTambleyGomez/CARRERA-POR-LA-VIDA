@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section.complete {
+  border-color: green;
+}
+
+.section.incomplete {
+  border-color: red;
+}
+
+.section p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.continue-button:hover {
+  background-color: #999;
+}
+
+.continue-button.disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.continue-button.active {
+  background-color: #4CAF50;
+  color: white;
+}

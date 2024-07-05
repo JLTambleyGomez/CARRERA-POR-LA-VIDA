@@ -1,0 +1,54 @@
+<div class="kit-deportivo">
+  <span (click)="back()" class="back-arrow">&lt;</span>
+
+  <h2>Kit deportivo</h2>
+  <p>Selecciona la camiseta y la talla que prefieras!</p>
+  <form [formGroup]="kitForm" (ngSubmit)="onSubmit()">
+    <div class="options">
+      <div class="option">
+        <label>
+          <input type="radio" formControlName="gender" value="hombre">
+          <div class="image-container">
+            <div class="black-square"></div>
+          </div>
+          <div class="size">
+            <p>Hombre</p>
+            <p>99 cm (pecho)</p>
+            <p>87 cm (cintura)</p>
+          </div>
+        </label>
+        <div class="sizes" *ngIf="kitForm.get('gender')?.value === 'hombre'">
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'S'" (click)="selectSize('S')">S<br>(96 cm)</button>
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'M'" (click)="selectSize('M')">M<br>(100 cm)</button>
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'L'" (click)="selectSize('L')">L<br>(104 cm)</button>
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'XL'" (click)="selectSize('XL')">XL<br>(108 cm)</button>
+        </div>
+      </div>
+      <div class="option">
+        <label>
+          <input type="radio" formControlName="gender" value="mujer">
+          <div class="image-container">
+            <div class="black-square"></div>
+          </div>
+          <div class="size">
+            <p>Mujer</p>
+            <p>84 cm (pecho)</p>
+            <p>70 cm (cintura)</p>
+          </div>
+        </label>
+        <div class="sizes" *ngIf="kitForm.get('gender')?.value === 'mujer'">
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'S'" (click)="selectSize('S')">S<br>(82 cm)</button>
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'M'" (click)="selectSize('M')">M<br>(86 cm)</button>
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'L'" (click)="selectSize('L')">L<br>(90 cm)</button>
+          <button type="button" class="size-btn" [class.selected]="kitForm.get('size')?.value === 'XL'" (click)="selectSize('XL')">XL<br>(94 cm)</button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!kitForm.valid && (kitForm.dirty || kitForm.touched)" class="error-message">
+      Por favor, complete todos los campos correctamente.
+    </div>    <p  (click)="handleGuiaDeTallas()"class="gdt">Guia de tallas </p>
+
+    <button type="submit" class="accept-btn">Aceptar</button>
+  </form>
+</div>

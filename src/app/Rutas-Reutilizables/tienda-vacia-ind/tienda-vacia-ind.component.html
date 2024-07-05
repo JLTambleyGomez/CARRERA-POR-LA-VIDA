@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="shop-container" *ngIf="products.length > 0; else emptyShop">
+    <button class="back-button" (click)="goBack()">&#8592;</button>
+    <button class="close-button" (click)="close()">&#10005;</button>
+    <h2>Tienda</h2>
+    
+    <div class="product" *ngFor="let product of products">
+      <div class="product-details">
+        <div class="product-image"></div>
+        <p>{{ product.name }}</p>
+        <p>{{ product.price | currency:'USD' }}</p>
+        <div class="quantity-selector">
+          <label>Cantidad</label>
+          <button (click)="confirmDecreaseQuantity(product)">-</button>
+          <input type="text" [value]="product.quantity" readonly>
+          <button (click)="increaseQuantity(product)">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="total">
+      <p>Total</p>
+      <p>{{ totalPrice | currency:'USD' }}</p>
+    </div>
+    
+    <div class="btnss">
+      <button (click)="additems()" class="add-button">Agregar</button>
+      <button [disabled]="products.length === 0" class="buy-button" (click)="checkout()">Comprar</button>
+    </div>
+  </div>
+
+  <ng-template #emptyShop>
+    <div class="empty-shop">
+      <button class="back-button" (click)="goBack()">&#8592;</button>
+      <button class="close-button" (click)="close()">&#10005;</button>
+      <h2>Tienda</h2>
+      <div class="empty-shop">
+        <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717899990/Carrera%20Por%20La%20Vida%20Client/4598559_z56cwx.png" alt="Empty shop icon">
+        <p>Añade productos especializados para tu equipamiento</p>
+        <div class="button-container">
+          <button (click)="additems()" class="add-button">Agregar</button>
+          <button class="no-add-button" (click)="noAddItems()">No quiero agregar productos</button>
+        </div>
+      </div>
+      <button class="buy-button" disabled>Comprar</button>
+    </div>
+  </ng-template>
+
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <h2>Confirmación</h2>
+      <p>¿Desea eliminar el producto {{ productToRemove?.name }}?</p>
+      <button (click)="removeProduct()">Sí</button>
+      <button (click)="closeModal()">No</button>
+    </div>
+  </div>
+</div>

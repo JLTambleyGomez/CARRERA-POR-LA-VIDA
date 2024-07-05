@@ -1,0 +1,42 @@
+<!-- inicio-de-sesion.component.html -->
+<div class="login-container">
+  <div class="incont">
+    <h1 class="inicio">Inicio de sesión</h1>
+    <img class="runner" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718933277/Carrera%20Por%20La%20Vida%20Client/9937361_yvxfkb.png"/>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Nombre o email</label>
+      <input id="email" formControlName="email" type="text" required />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input id="password" formControlName="password" type="password" required />
+      <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>
+    </div>
+
+    <div class="form-group remember-me">
+      <input id="rememberMe" formControlName="rememberMe" type="checkbox" />
+      <label for="rememberMe">Recordarme</label>
+    </div>
+
+    <button type="submit" class="submit-button">Iniciar sesión</button>
+  </form>
+
+  <p>¿No tienes cuenta? <a (click)="handleRegister()">Regístrate</a></p>
+  <!-- <div class="separator">ó</div>
+
+  <div class="social-login">
+    <button (click)="signInWithGoogle()" class="google-button">Ingresa con Google</button>
+    <button (click)="signInWithFacebook()" class="facebook-button">Ingresa con Facebook</button>
+  </div> -->
+  <div class="modal" *ngIf="showErrorModal">
+    <div class="modal-content">
+      <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718936835/Carrera%20Por%20La%20Vida%20Client/9998359_strtbt.png" alt="Error Icon" class="modal-icon">
+      <p>{{ errorMessage }}</p>
+      <button (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</div>

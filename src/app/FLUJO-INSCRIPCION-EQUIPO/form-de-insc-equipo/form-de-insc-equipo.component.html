@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="header">
+      <button class="back-button" (click)="goBack()">&lt;</button>
+      <h2>Form de inscripción de mi Equipo</h2>
+    </div>
+    <div class="content">
+      <p class="intro-text">¿Tu equipo está listo para la carrera 7K?<br>Completa el formulario y únanse a la carrera por la vida.</p>
+      <div class="section" [ngClass]="{ 'complete': datosDeParticipantes === 'completo', 'incomplete': datosDeParticipantes === 'incompleto' }">
+        <div class="section-header">
+          <span>Datos de los participantes</span>
+          <span (click)="handleDatosDelPaticipante()" class="status">{{ datosDeParticipantes === 'completo' ? 'completo' : 'completar' }}</span>
+        </div>
+        <p>Información de los participantes</p>
+      </div>
+      <div class="section" [ngClass]="{ 'complete': MikitDeportivo === 'completo', 'incomplete': MikitDeportivo === 'incompleto' }">
+        <div class="section-header">
+          <span>Mi kit deportivo</span>
+          <span (click)="handleKitDeportivo()" class="status">{{ MikitDeportivo === 'completo' ? 'completo' : 'completar' }}</span>
+        </div>
+        <p>Configura tu kit, el resto de tu equipo lo hará luego.</p>
+      </div>
+      <div class="section" [ngClass]="{ 'complete': productosOpcionales === 'completo', 'incomplete': productosOpcionales === 'incompleto' }">
+        <div class="section-header">
+          <span>Añade productos (opcional)</span>
+          <span (click)="handleAgregarProductos()" class="status">{{ productosOpcionales === 'completo' ? 'completo' : 'completar' }}</span>
+        </div>
+        <p>Recuerda que tu inscripción incluye kit deportivo.</p>
+      </div>
+      <div class="section" [ngClass]="{ 'complete': preguntasDePatrocinadores === 'completo', 'incomplete': preguntasDePatrocinadores === 'incompleto' }">
+        <div class="section-header">
+          <span>Preg patrocinadores</span>
+          <span (click)="handlePreguntasPatrocinadores()" class="status">{{ preguntasDePatrocinadores === 'completo' ? 'completo' : 'completar' }}</span>
+        </div>
+        <p>Información de las preguntas.</p>
+      </div>
+    </div>
+    <button class="continue-button" [disabled]="!isFormComplete" [ngClass]="{ 'disabled': !isFormComplete, 'active': isFormComplete }" (click)="continueWithPayment()">Continuar con el pago</button>
+  
+    <div *ngIf="showModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" (click)="showModal = false">&times;</span>
+        <h3>¡Nota!</h3>
+        <p>Acepto que, en caso de que alguno de los integrantes de mi equipo no acepte los términos y condiciones, se disuelva el equipo y deberá buscar un reembolso; de lo contrario, los integrantes se convertirán en corredores individuales.</p>
+        <button (click)="confirmDatosDelPaticipante()">Acepto</button>
+      </div>
+    </div>
+  </div>
+  

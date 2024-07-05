@@ -1,0 +1,77 @@
+.formulario-inscripcion {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    width: 300px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .bienvenida {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .bienvenida p:first-child {
+    font-weight: bold;
+  }
+  
+  .seccion {
+    margin-bottom: 15px;
+  }
+  
+  .titulo {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contenido {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+  
+  .estado {
+    font-weight: bold;
+  }
+  
+  .completado {
+    color: green;
+  }
+  
+  .completar {
+    color: orange;
+  }
+  
+  .opcional {
+    font-style: italic;
+  }
+  
+  .completar-inscripcion-btn {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+  

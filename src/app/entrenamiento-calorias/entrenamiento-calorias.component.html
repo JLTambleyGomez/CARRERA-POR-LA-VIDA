@@ -1,1 +1,37 @@
-<p>entrenamiento-calorias works!</p>
+<div class="container">
+    <header>
+      <button class="back-button" (click)="goBack()">&#x2190; Atrás</button>
+      <h1>Entrenamiento</h1>
+    </header>
+    <section>
+      <div class="event-info">
+        <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718143594/Carrera%20Por%20La%20Vida%20Client/3362598_sgcihu.png" alt="Evento">
+        <p>El evento empieza en 24 días</p>
+      </div>
+      <div class="calories-section">
+        <input type="radio" id="calories" name="option" [(ngModel)]="selectedOption" value="calories" checked>
+        <label for="calories">Cálculo de calorías</label>
+        <p>Para calcular con más precisión las calorías que quemarás con cada entrenamiento, necesitamos saber tu altura y tu peso.</p>
+        <div class="input-group">
+          <label for="altura">
+            <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718143594/Carrera%20Por%20La%20Vida%20Client/3362598_sgcihu.png" alt="Altura">
+            Altura:
+          </label>
+          <input type="number" id="altura" [(ngModel)]="altura" (input)="checkInputs()" placeholder="CM">
+        </div>
+        <div class="input-group">
+          <label for="peso">
+            <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718143594/Carrera%20Por%20La%20Vida%20Client/3362598_sgcihu.png" alt="Peso">
+            Peso:
+          </label>
+          <input type="number" id="peso" [(ngModel)]="peso" (input)="checkInputs()" placeholder="kg">
+        </div>
+        <button [disabled]="!inputsFilled" (click)="continue()">Continuar</button>
+      </div>
+      <div class="steps">
+        <p>Crea tu propio objetivo</p>
+        <p>Conecta tu reloj (opcional)</p>
+      </div>
+    </section>
+  </div>
+  

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="header">
+    <button class="back-button" (click)="handleBack()">←</button>
+    <h2>Mis datos y los datos de los participantes</h2>
+  </div>
+  <div class="content">
+    <div class="section" [ngClass]="{ 'complete': datosDelParticipante === 'completo', 'incomplete': datosDelParticipante === 'incompleto' }">
+      <div class="section-header">
+        <span>Mi inscripción</span>
+        <span (click)="handleDatosDePaticipantes()" class="status">{{ datosDelParticipante === 'completo' ? 'completo' : 'completar' }}</span>
+      </div>
+      <p>Información de mis datos de inscripción</p>
+    </div>
+
+    <div class="section" [ngClass]="{ 'complete': teamNameStatus === 'completo', 'incomplete': teamNameStatus === 'incompleto' }">
+      <div class="section-header">
+        <span>Nombre del equipo</span>
+        <span class="status">{{ teamNameStatus }}</span>
+      </div>
+      <input type="text" [(ngModel)]="teamName" (ngModelChange)="handleTeamNameChange()" placeholder="Nombre del equipo">
+    </div>
+
+    <div class="section" *ngFor="let participant of participants; let i = index" [ngClass]="{ 'complete': participant.status === 'completo', 'incomplete': participant.status === 'incompleto' }">
+      <div class="section-header">
+        <span>{{ participant.name }}</span>
+        <span (click)="handleParticipant(i)" class="status">{{ participant.status === 'completo' ? 'completo' : 'completar' }}</span>
+      </div>
+      <p>Información del {{ participant.name }}</p>
+    </div>
+
+    <p>Completa los datos de tu equipo</p>
+  </div>
+  <button class="continue-button" [disabled]="!isFormComplete" [ngClass]="{ 'disabled': !isFormComplete, 'active': isFormComplete }" (click)="continueWithPayment()">Aceptar</button>
+</div>

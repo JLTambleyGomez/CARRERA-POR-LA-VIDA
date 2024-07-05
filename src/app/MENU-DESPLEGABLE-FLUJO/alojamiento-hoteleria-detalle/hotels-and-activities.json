@@ -1,0 +1,267 @@
+{
+    "hotels": [
+      {
+        "name": "Palma Verde",
+        "description": "El Hotel Palma Verde cuenta con 16 villas campestre, con piscina privada y zona BBQ, 40 habitaciones tipo suites. Ubicado en Armenia Quindio.",
+        "address": "Glorieta Club Campestre, vía Aeropuerto El Edén, Armenia, Quindío",
+        "phone": "310 8421231",
+        "email": "contacto@hotelpalmaverde.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Ayenda",
+        "description": "Hotel Ayenda ofrece comodidad y servicios de alta calidad para una estancia agradable en Armenia.",
+        "address": "Calle 10 # 5-30, Armenia, Quindío",
+        "phone": "320 8425678",
+        "email": "contacto@hotelayenda.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Foret",
+        "description": "Hotel Foret es ideal para quienes buscan tranquilidad y naturaleza en su visita a Armenia.",
+        "address": "Km 3 Vía a El Caimo, Armenia, Quindío",
+        "phone": "315 8437890",
+        "email": "contacto@hotelforet.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Toledo",
+        "description": "Hotel Toledo ofrece una experiencia única con habitaciones confortables y una excelente ubicación en Armenia.",
+        "address": "Carrera 14 # 23-45, Armenia, Quindío",
+        "phone": "310 8491234",
+        "email": "contacto@hoteltoledo.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Los Robles",
+        "description": "Hotel Los Robles ofrece un entorno tranquilo y natural con todas las comodidades modernas.",
+        "address": "Av. Centenario # 45-67, Armenia, Quindío",
+        "phone": "311 8425678",
+        "email": "contacto@hotellosrobles.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Mirador del Quindío",
+        "description": "Disfruta de vistas espectaculares y un servicio excepcional en el Hotel Mirador del Quindío.",
+        "address": "Calle 1 # 10-50, Salento, Quindío",
+        "phone": "312 8476521",
+        "email": "contacto@miradordelquindio.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Casa de Campo",
+        "description": "Hotel Casa de Campo ofrece una experiencia auténtica con un toque rústico y acogedor.",
+        "address": "Km 5 Vía a Filandia, Quimbaya, Quindío",
+        "phone": "314 8421234",
+        "email": "contacto@casadecampo.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Campestre La Montaña",
+        "description": "Ubicado en las montañas, este hotel campestre ofrece una escapada perfecta.",
+        "address": "Km 8 Vía a El Valle, Montenegro, Quindío",
+        "phone": "315 8456789",
+        "email": "contacto@campestrelamontana.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "La Posada",
+        "description": "Hotel La Posada combina tradición y modernidad para ofrecer una estancia memorable.",
+        "address": "Carrera 12 # 34-56, Armenia, Quindío",
+        "phone": "316 8425678",
+        "email": "contacto@laposada.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Bosques del Quindío",
+        "description": "Disfruta de la naturaleza y el confort en el Hotel Bosques del Quindío.",
+        "address": "Km 7 Vía a Pijao, Armenia, Quindío",
+        "phone": "317 8421234",
+        "email": "contacto@bosquesdelquindio.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Villa Esperanza",
+        "description": "Hotel Villa Esperanza ofrece un refugio tranquilo con todas las comodidades.",
+        "address": "Km 4 Vía a La Tebaida, Quindío",
+        "phone": "318 8425678",
+        "email": "contacto@villaesperanza.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Finca Hotel El Paraíso",
+        "description": "Una experiencia auténtica en el corazón del Quindío, rodeado de cafetales.",
+        "address": "Km 2 Vía a Circasia, Armenia, Quindío",
+        "phone": "319 8421234",
+        "email": "contacto@fincahotelelparaiso.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Casa Blanca",
+        "description": "Hotel Casa Blanca ofrece elegancia y comodidad en el centro de Armenia.",
+        "address": "Carrera 5 # 20-30, Armenia, Quindío",
+        "phone": "320 8425678",
+        "email": "contacto@casablanca.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Las Palmas",
+        "description": "Disfruta de una estancia relajante en el Hotel Las Palmas, con amplias instalaciones.",
+        "address": "Calle 8 # 15-20, Montenegro, Quindío",
+        "phone": "321 8421234",
+        "email": "contacto@laspalmas.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "El Edén",
+        "description": "Hotel El Edén ofrece un ambiente paradisíaco y servicio de primera.",
+        "address": "Av. Bolívar # 30-40, Armenia, Quindío",
+        "phone": "322 8425678",
+        "email": "contacto@eledén.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "La Casona",
+        "description": "La Casona es un hotel con encanto colonial y modernas comodidades.",
+        "address": "Carrera 7 # 10-50, Filandia, Quindío",
+        "phone": "323 8421234",
+        "email": "contacto@lacasona.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "Quinta Real",
+        "description": "Hotel Quinta Real ofrece lujo y confort en un entorno espectacular.",
+        "address": "Calle 2 # 6-30, Salento, Quindío",
+        "phone": "324 8425678",
+        "email": "contacto@quintareal.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "El Refugio",
+        "description": "El Refugio es un hotel boutique que ofrece una experiencia íntima y personalizada.",
+        "address": "Km 3 Vía a Buenavista, Quindío",
+        "phone": "325 8421234",
+        "email": "contacto@elrefugio.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "La Hacienda",
+        "description": "Hotel La Hacienda combina lujo y tradición en un entorno rural.",
+        "address": "Km 1 Vía a Génova, Quindío",
+        "phone": "326 8425678",
+        "email": "contacto@lahacienda.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      },
+      {
+        "name": "El Pórtico",
+        "description": "Hotel El Pórtico ofrece una estancia cómoda y acogedora en el centro de Armenia.",
+        "address": "Carrera 9 # 21-40, Armenia, Quindío",
+        "phone": "327 8421234",
+        "email": "contacto@elportico.com",
+        "images": ["https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"]
+      }
+    ],
+    "activities": [
+      {
+        "id": "cocora",
+        "name": "Cocora",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "parque-cafe",
+        "name": "Parque del Café",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "panaca",
+        "name": "PANACA",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "recuca",
+        "name": "Recuca",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "botanical-garden",
+        "name": "Jardín Botánico del Quindío",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "coffee-park",
+        "name": "Parque del Café",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "cocora-valley",
+        "name": "Valle de Cocora",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "butterfly-garden",
+        "name": "Mariposario del Quindío",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "filandia",
+        "name": "Filandia",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "quimbaya",
+        "name": "Quimbaya",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "salento",
+        "name": "Salento",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "tebaida",
+        "name": "La Tebaida",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "calarca",
+        "name": "Calarcá",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "pijao",
+        "name": "Pijao",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "genova",
+        "name": "Génova",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "cordoba",
+        "name": "Córdoba",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "buena-vista",
+        "name": "Buenavista",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "montenegro",
+        "name": "Montenegro",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "armenia",
+        "name": "Armenia",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      },
+      {
+        "id": "quindio-tour",
+        "name": "Tour por el Quindío",
+        "image": "https://res.cloudinary.com/dzlgt5j3g/image/upload/v1718516199/Carrera%20Por%20La%20Vida%20Client/2946876_usc72a.png"
+      }
+    ]
+  }
+  

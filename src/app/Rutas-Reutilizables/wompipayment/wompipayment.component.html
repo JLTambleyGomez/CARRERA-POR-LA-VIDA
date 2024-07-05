@@ -1,0 +1,9 @@
+<form action="https://checkout.wompi.co/p/" method="GET" *ngIf="paymentData">
+  <input type="hidden" name="public-key" [value]="paymentData.publicKey" />
+  <input type="hidden" name="currency" [value]="paymentData.currency" />
+  <input type="hidden" name="amount-in-cents" [value]="paymentData.value" />
+  <input type="hidden" name="reference" [value]="paymentData.reference" />
+  <input type="hidden" name="signature:integrity" [value]="paymentData.signature" />
+  <input type="hidden" name="redirect-url" value="http://localhost:4200/purchase-complete" />
+  <button type="submit">Pagar con Wompi</button>
+</form>

@@ -1,0 +1,101 @@
+.form-container {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .billing-info {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .registrations {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .registrations p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .registration-button {
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .add-button {
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    background: #eee;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .summary {
+    margin: 20px 0;
+  }
+  
+  .summary h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .total {
+    font-weight: bold;
+  }
+  
+  .payment-button {
+    display: block;
+    width: 100%;
+    background: #ccc;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: not-allowed;
+    border-radius: 5px;
+  }
+  

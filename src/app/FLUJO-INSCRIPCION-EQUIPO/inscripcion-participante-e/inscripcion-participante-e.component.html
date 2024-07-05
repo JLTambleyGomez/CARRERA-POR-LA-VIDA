@@ -1,0 +1,47 @@
+<div class="form-container">
+  <button class="back-button" (click)="handleBack()">&#x2190;</button>
+  <h2>Pre-inscripción participante {{ participantIndex + 1 }}</h2>
+  <form [formGroup]="participanteForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fullName">Nombre completo:</label>
+      <input type="text" id="fullName" formControlName="fullName" required>
+    </div>
+    <div class="form-group">
+      <label for="idNumber">Cédula / DNI:</label>
+      <input type="text" id="idNumber" formControlName="idNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Teléfono:</label>
+      <input type="text" id="phone" formControlName="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" formControlName="isDonatingBlood">
+        El participante va a realizar la donación de sangre
+      </label>
+    </div>
+    <div class="note">
+      <h3>Nota importante!</h3>
+      <p>
+        Usaremos estos datos para contactar al participante. De esta forma, él podrá configurar el kit y continuar con su proceso de registro.
+      </p>
+      <p>
+        En tu pago se verá reflejado solo el monto de la inscripción de este participante. Sin embargo, el participante podrá comprar y pagar lo que él desee en el momento de completar sus datos.
+      </p>
+    </div>
+    <button type="submit" class="accept-button">Enviar</button>
+  </form>
+</div>
+
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <h2>Enviando datos</h2>
+    <p>Los datos del participante están siendo enviados al servidor...</p>
+    <button (click)="closeModal()">Aceptar</button>
+  </div>
+</div>

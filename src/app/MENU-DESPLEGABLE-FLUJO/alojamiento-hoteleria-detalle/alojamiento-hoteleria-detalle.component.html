@@ -1,0 +1,22 @@
+<div class="container">
+    <header>
+      <button (click)="goBack()">&#x2190; Atrás</button>
+      <h1>{{ hotelName }}</h1>
+    </header>
+    <section *ngIf="hotelDetails">
+      <h2>Detalles del Hotel</h2>
+      <p>{{ hotelDetails.description }}</p>
+      <p><strong>Dirección:</strong> {{ hotelDetails.address }}</p>
+      <p><strong>Teléfono:</strong> {{ hotelDetails.phone }}</p>
+      <p><strong>Email:</strong> <a href="mailto:{{ hotelDetails.email }}">{{ hotelDetails.email }}</a></p>
+      <div class="image-gallery">
+        <img *ngFor="let image of hotelDetails.images" [src]="image" alt="{{ hotelName }}">
+      </div>
+      <button (click)="contact()">Contactar</button>
+    </section>
+    <section class="quindio-info">
+      <h2>Qué hacer en el Quindío</h2>
+      <p>El Quindío es un lugar maravilloso para visitar, lleno de hermosos paisajes y actividades emocionantes. Puedes explorar el Valle de Cocora, famoso por sus altísimas palmas de cera, o disfrutar de un día lleno de diversión en el Parque del Café. No te pierdas la oportunidad de visitar el Jardín Botánico del Quindío y el Mariposario para una experiencia más relajada y educativa. También puedes recorrer los encantadores pueblos de Salento y Filandia, conocidos por su arquitectura colorida y su vibrante cultura cafetera.</p>
+    </section>
+  </div>
+  

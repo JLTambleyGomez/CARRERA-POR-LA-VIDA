@@ -1,0 +1,42 @@
+<div class="container">
+  <header>
+    <button (click)="goBack()">&#x2190; Atrás</button>
+    <h1>Alojamiento - Hotelería</h1>
+  </header>
+  <section class="activities">
+    <h2>Qué hacer en el Quindío</h2>
+    <div class="slider">
+      <button class="prev" (click)="previousActivitySlide()">&#x25C0;</button>
+      <div class="slider-wrapper" [style.transform]="'translateX(' + (-activityCurrentSlide * 100) + '%)'">
+        <div class="activity card" *ngFor="let activity of activities">
+          <div class="image-container">
+            <img [src]="activity.image" alt="{{ activity.name }}">
+          </div>
+          <div class="details">
+            <h3>{{ activity.name }}</h3>
+            <button class="view-button" (click)="navigateToActivity(activity.name)">Ver</button>
+          </div>
+        </div>
+      </div>
+      <button class="next" (click)="nextActivitySlide()">&#x25B6;</button>
+    </div>
+  </section>
+  <section class="hotels">
+    <h2>Hoteles aliados</h2>
+    <div class="slider">
+      <button class="prev" (click)="previousHotelSlide()">&#x25C0;</button>
+      <div class="slider-wrapper" [style.transform]="'translateX(' + (-hotelCurrentSlide * 100) + '%)'">
+        <div class="hotel card" *ngFor="let hotel of hotels">
+          <div class="image-container">
+            <img [src]="hotel.images[0]" alt="{{ hotel.name }}">
+          </div>
+          <div class="details">
+            <h3>{{ hotel.name }}</h3>
+            <button class="view-button" (click)="navigateToDetail(hotel.name)">Ver</button>
+          </div>
+        </div>
+      </div>
+      <button class="next" (click)="nextHotelSlide()">&#x25B6;</button>
+    </div>
+  </section>
+</div>

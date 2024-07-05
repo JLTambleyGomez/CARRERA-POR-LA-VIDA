@@ -1,0 +1,29 @@
+.e-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; 
+  padding: 20px; 
+  width: 100%;
+  background-color: white;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+
+.e-menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 20px; }
+
+.e-options {
+  margin: 0 10px;
+  font-weight: 400;
+  color: black;
+}
+
+.e-topbar .e-options:hover {
+  cursor: pointer;
+  text-decoration: underline; 
+}

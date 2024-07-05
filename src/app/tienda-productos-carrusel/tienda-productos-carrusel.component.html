@@ -1,0 +1,41 @@
+
+<button (click)="handleShow()"*ngIf="!showComponent">ver</button>
+<div class="contain" *ngIf="showComponent">
+<div class="e-carousel">
+    <!-- Contenedor de las diapositivas -->
+    <div class="e-carousel-slides">
+        <!-- Diapositiva anterior -->
+        <div class="e-carousel-slide e-carousel-slide-prev" *ngIf="slides.length > 1" [ngClass]="{'transition': true}" [style.backgroundImage]="'url(' + slides[(currentSlide - 1 + slides.length) % slides.length].src + ')'">
+        </div>
+        <!-- Diapositiva actual -->
+        <div class="e-carousel-slide e-carousel-slide-current" [ngClass]="{'transition': true}" [style.backgroundImage]="'url(' + slides[currentSlide].src + ')'">
+        </div>
+        <!-- Diapositiva siguiente -->
+        <div class="e-carousel-slide e-carousel-slide-next" *ngIf="slides.length > 1" [ngClass]="{'transition': true}" [style.backgroundImage]="'url(' + slides[(currentSlide + 1) % slides.length].src + ')'">
+        </div>
+    </div>
+<!-- Contenedor de los botones de talla -->
+<div class="e-dots">
+    <span *ngFor="let slide of slides; let i = index" class="e-dot" [class.active]="i === currentSlide" (click)="goToSlide(i)"></span>
+</div>
+
+<!-- Texto de la talla actual -->
+<p>{{ slides[currentSlide].text }}</p>
+
+<!-- Botones para cada talla -->
+<div class="talla-buttons">
+    <button *ngFor="let slide of slides; let i = index" (click)="goToSlide(i)">{{ slide.talla }}</button>
+</div>
+
+<div class="gc">
+    <img class="regla" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717177092/Carrera%20Por%20La%20Vida%20Client/6860735_zdjecy.png"/>
+    <p>Guía de tallas</p>
+</div>
+
+<p>Valor: ${{slides[currentSlide].valor}}</p>
+<p>Total: ${{totalValue}}</p>
+
+<div>Cantidad <button (click)="unAddItem()">-</button><p>{{itemsCount}}</p><button (click)="addItem()">+</button></div>
+
+</div>
+</div>

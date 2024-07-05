@@ -1,0 +1,38 @@
+<div class="mis-compras-container" *ngIf="!selectedPurchase">
+  <div class="header">
+    <button class="back-button" (click)="goBack()">&#x2190;</button>
+    <h2>Mis compras</h2>
+  </div>
+  <div class="purchase-list">
+    <div class="purchase-item" *ngFor="let purchase of purchases" (click)="selectPurchase(purchase)">
+      <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152214/Carrera%20Por%20La%20Vida%20Client/1946429_amibdp.png" alt="Purchase Icon" class="purchase-icon">
+      <div class="purchase-details">
+        <p>Fecha compra: {{ purchase.date }}</p>
+        <p>{{ purchase.description }}</p>
+        <p>Total: {{ purchase.total | currency }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="purchase-detail-container" *ngIf="selectedPurchase">
+  <div class="header">
+    <button class="back-button" (click)="goBack()">&#x2190;</button>
+    <h2>Detalle compra</h2>
+  </div>
+  <div class="purchase-detail">
+    <h3>Información del participante</h3>
+    <p>{{ selectedPurchase.detail.participantInfo }}</p>
+    <h3>Resumen de la compra</h3>
+    <ul>
+      <li *ngFor="let item of selectedPurchase.detail.items">{{ item.description }}: {{ item.amount | currency }}</li>
+    </ul>
+    <h3>Detalle del pago</h3>
+    <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717254558/Carrera%20Por%20La%20Vida%20Client/removal.ai__f4ff7602-0fdd-45c1-9727-0f42a1ea8881-whatsapp-image-2024-06-01-at-11-08-51-am_rruvif.png" alt="PSE Logo" class="pse-logo">
+    <p>Método: {{ selectedPurchase.detail.paymentInfo.method }}</p>
+    <p>Cantidad: {{ selectedPurchase.detail.paymentInfo.amount | currency }}</p>
+    <p>Fecha: {{ selectedPurchase.detail.paymentInfo.date }}</p>
+    <p>Referencia: {{ selectedPurchase.detail.paymentInfo.reference }}</p>
+    <p>Estado: {{ selectedPurchase.detail.paymentInfo.status }}</p>
+  </div>
+</div>

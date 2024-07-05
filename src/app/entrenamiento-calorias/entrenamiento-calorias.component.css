@@ -1,0 +1,123 @@
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  header button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .event-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .event-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .calories-section {
+    margin-bottom: 20px;
+  }
+  
+  .calories-section label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .calories-section p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .input-group img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .input-group label {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  input {
+    width: calc(100% - 50px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .steps {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  .steps p {
+    margin: 5px 0;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  

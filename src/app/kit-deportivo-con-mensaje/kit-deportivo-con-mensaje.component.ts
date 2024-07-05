@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-kit-deportivo-con-mensaje',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './kit-deportivo-con-mensaje.component.css'
 })
 export class KitDeportivoConMensajeComponent {
+  constructor(private location: Location) {}
 
+  variable:string="variable"
+
+  funcion(){
+    alert("alerta")
+  }
+  back(): void {
+    this.location.back();
+  }
 }

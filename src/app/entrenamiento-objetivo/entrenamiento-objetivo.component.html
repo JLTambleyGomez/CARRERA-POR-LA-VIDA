@@ -1,1 +1,28 @@
-<p>entrenamiento-objetivo works!</p>
+<div class="container">
+    <header>
+      <button (click)="goBack()">&#x2190; Atrás</button>
+      <h1>Entrenamiento</h1>
+    </header>
+    <section>
+      <h2>El evento empieza en {{ daysUntilEvent }} días</h2>
+      <div class="step">
+        <input type="radio" id="calorias" name="option" [(ngModel)]="selectedOption" value="calorias">
+        <label for="calorias">Cálculo de calorías</label>
+      </div>
+      <div class="step">
+        <input type="radio" id="objetivo" name="option" [(ngModel)]="selectedOption" value="objetivo" checked>
+        <label for="objetivo">Crea tu propio objetivo</label>
+        <div class="goal-options">
+          <button class="goal-button">5k</button>
+          <button class="goal-button">10k</button>
+          <button class="goal-button">21k</button>
+        </div>
+      </div>
+      <div class="step">
+        <input type="radio" id="reloj" name="option" [(ngModel)]="selectedOption" value="reloj">
+        <label for="reloj">Conecta tu reloj (opcional)</label>
+      </div>
+      <button (click)="continue()">Continuar</button>
+    </section>
+  </div>
+  

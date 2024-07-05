@@ -1,0 +1,12 @@
+<div class="container">
+    <header>
+      <button (click)="goBack()">&#x2190; Atrás</button>
+    </header>
+    <h1>{{ activityDetails?.name }}</h1>
+
+    <section *ngIf="activityDetails">
+      <img [src]="activityDetails.image" alt="{{ activityDetails.name }}">
+      <p>Información detallada sobre la actividad {{ activityDetails.name }}.</p>
+    </section>
+  </div>
+  

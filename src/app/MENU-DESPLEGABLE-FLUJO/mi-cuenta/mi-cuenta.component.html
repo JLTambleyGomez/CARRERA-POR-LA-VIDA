@@ -1,0 +1,16 @@
+<div class="account-container">
+    <div class="header">
+      <button class="back-button" (click)="goBack()">&#x2190;</button>
+      <h2>Mi cuenta</h2>
+    </div>
+    
+    <div class="user-info">
+      <img [src]="userDetails.imageUrl" alt="User Image" class="user-image">
+      <div class="user-details">
+        <h3>{{ userDetails.name }}</h3>
+        <p *ngIf="userDetails.inscription; else noInscription">{{ userDetails.inscription }}</p>
+        <ng-template #noInscription><p>Sin inscripciones por ahora</p></ng-template>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,30 @@
+<div class="sub-me">
+    <h3>Distancia</h3>
+    <div class="sub-c-d">
+        <span [ngClass]="{ 'selected': selectedDistanceIndex === 0, 'unselected': selectedDistanceIndex !== 0 }" (click)="selectDistance(0)">{{ distances[0].name }}</span>
+        <span [ngClass]="{ 'selected': selectedDistanceIndex === 1, 'unselected': selectedDistanceIndex !== 1 }" (click)="selectDistance(1)">{{ distances[1].name }}</span>
+        <span [ngClass]="{ 'selected': selectedDistanceIndex === 2, 'unselected': selectedDistanceIndex !== 2 }" (click)="selectDistance(2)">{{ distances[2].name }}</span>
+    </div>
+    <div class="sub-text">
+        <p>{{ distances[selectedDistanceIndex].text }}</p>
+        <p> Tu inscripción de 7k incluye: Camiseta y rastreador.</p>
+    </div>
+    <p>{{ distances[selectedDistanceIndex].route }}</p>
+    <div class="sub-img-r">
+        <p>Salida</p>
+        <img class="img-recorrido" [src]="distances[selectedDistanceIndex].image"/>
+    </div>
+    <p>Premiación</p>
+    <div class="sub-medals">
+        <div class="smc"><img class="smi" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717172235/Carrera%20Por%20La%20Vida%20Client/2374861_t7wxtj.png"/>
+        2do
+        <p>$1.000.000</p> </div> 
+        <div class="smc1"><img class="smi" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717172226/Carrera%20Por%20La%20Vida%20Client/2374851_bf9zvu.png"/>
+        1ero
+        <p>$2.000.000</p></div>
+        <div class="smc"><img class="smi" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717172234/Carrera%20Por%20La%20Vida%20Client/2374864_kgkfvb.png"/>
+        3ro
+        <p>$750.000</p></div>
+    </div>
+    <button (click)="handleInscribe()" class="sbtn">Inscribirme</button>
+</div>

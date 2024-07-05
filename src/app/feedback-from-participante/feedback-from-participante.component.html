@@ -1,1 +1,16 @@
-<p>feedback-from-participante works!</p>
+
+<button (click)="OpenModal()" class="open-modal-btn">Coloque su feedback aquí</button>
+
+<div *ngIf="mostrarModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" (click)="CloseModal()">&times;</button>
+      <h1>¡Hola Fredy Cardona!</h1>
+      <p>
+        Nos complace confirmar que has completado tu inscripción en la Carrera por la Vida 7K. Gracias por unirte al equipo de Mario Zapata para este emocionante evento. Tu participación es vital para nuestro éxito y estamos ansiosos por verte en la línea de salida.
+      </p>
+      <p>
+        ¡Prepárate para un día lleno de energía y espíritu comunitario!
+      </p>
+      <button (click)="CloseModal()">Aceptar</button>
+    </div>
+  </div>

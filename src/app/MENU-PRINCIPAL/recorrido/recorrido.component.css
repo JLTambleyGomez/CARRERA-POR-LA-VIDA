@@ -1,0 +1,96 @@
+/* recorrido.component.css */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    gap:10%;
+
+}
+.carrusel-contain{
+width: 80%;
+}
+
+.r-c {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.r-c h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.imgr-c {
+    margin-top: 100px;
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.at-contain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    margin-top: 100px;
+}
+
+.at-t {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.at-rc {
+    width: 20%;
+    border-radius: 5px;
+}
+
+.rc-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 30%;
+    margin-bottom:10%;
+
+}
+
+.rc-btn {
+    width:200px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.rc-btn:hover {
+    background-color: #444;
+}
+@media only screen and (max-width: 768px) {
+    .imgr-c {
+        margin-top: 100px;
+        width: 200px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .container {
+        margin-top: 16%;
+    }
+    }
+    
