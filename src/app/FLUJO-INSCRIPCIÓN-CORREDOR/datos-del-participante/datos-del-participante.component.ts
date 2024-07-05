@@ -67,7 +67,7 @@ export class DatosDelParticipanteComponent implements OnInit {
     });
 
     // Cargar departamentos
-    this.http.get('http://lacarreraporlavida.org:8000/api/departments').subscribe({
+    this.http.get('https://lacarreraporlavida.org:8000/api/departments').subscribe({
       next: (response: any) => {
         console.log('departamentos', response);
         this.departaments = response;
@@ -81,7 +81,7 @@ export class DatosDelParticipanteComponent implements OnInit {
     });
 
     // Cargar ciudades
-    this.http.get('http://lacarreraporlavida.org:8000/api/cities').subscribe({
+    this.http.get('https://lacarreraporlavida.org:8000/api/cities').subscribe({
       next: (response: any) => {
         console.log('ciudades', response);
         this.cities = response;
