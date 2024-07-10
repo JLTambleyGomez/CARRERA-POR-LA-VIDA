@@ -10,33 +10,20 @@
   <div class="payment-summary">
     <h2>Pago carrera por la vida</h2>
     <p>Total: 141.000 COP</p>
-    <form>
-      <label>
-        <input type="radio" name="datosPago" [(ngModel)]="selectedMethod" value="datosInscripcion"> Usar los datos de mi inscripción
-      </label>
-      <label>
-        <input type="radio" name="datosPago" [(ngModel)]="selectedMethod" value="otrosDatos"> Ingresar otros datos de pago
-      </label>
-    </form>
+
     <h2>Formulario de pago</h2>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" [(ngModel)]="participantDetails.name">
+    <form *ngIf="user; else loading">
+      <label for="nombre">Nombre: {{ user.name }}</label>
 
-      <label for="id">Número de cédula:</label>
-      <input type="text" id="id" name="id" [(ngModel)]="participantDetails.id">
+      <label for="id">Número de cédula: {{ user.docNumber }}</label>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="participantDetails.email">
+      <label for="email">Email: {{ user.email }}</label>
 
-      <label for="telefono">Número de celular:</label>
-      <input type="text" id="telefono" name="telefono" [(ngModel)]="participantDetails.phone">
-
-      <label for="banco">Seleccione su banco:</label>
-      <select id="banco" name="banco" [(ngModel)]="selectedBank">
-        <option *ngFor="let bank of banks" [value]="bank">{{ bank }}</option>
-      </select>
+      <label for="telefono">Número de celular: {{ user.phone }}</label>
     </form>
+    <ng-template #loading>
+      <p>Cargando datos del usuario...</p>
+    </ng-template>
     <div class="actions">
       <button class="cancel-button" (click)="cancel()">Cancelar</button>
       <app-wompipayment></app-wompipayment>

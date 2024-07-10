@@ -1,5 +1,4 @@
 .payment-container {
-  width: 100%;
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -95,3 +94,10 @@ h1 {
 .pay-button:hover {
   background-color: #388e3c;
 }
+@media only screen and (max-width: 768px) {
+  .payment-container {
+    margin-top: 17%;
+
+  }
+
+  }

@@ -2,7 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
+import { ApiService } from '../../api-service.service';
 @Component({
   selector: 'app-finalize-purchase',
   standalone: true,
@@ -21,18 +21,16 @@ export class FinalizePurchaseComponent implements OnInit {
 
   ];
 
-  discountDetails = 'Obtén un 20% de descuento en la inscripción donando sangre';
-  donationAmount = this.purchaseDetails[0].amount * 0.2;
 
   get subtotal() {
     return this.purchaseDetails.reduce((sum, item) => sum + item.amount, 0);
   }
 
   get total() {
-    return this.subtotal - this.donationAmount;
+    return this.subtotal ;
   }
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient, private apiService:ApiService) {}
 
 
 
@@ -74,7 +72,7 @@ ngOnInit(): void {
     const storedUser = localStorage.getItem('usuario');
     if (storedUser) {
       const user = JSON.parse(storedUser);
-      const userId = user.userToken.userId;
+      const userId = user.userId;
       const value = this.total;
       const token = user.token;
 
@@ -84,7 +82,7 @@ ngOnInit(): void {
 
       const body = { userId, value };
 
-      this.http.post('http://lacarreraporlavida.org:8000/api/payments/wompi', body, { headers }).subscribe({
+      this.apiService.wompiPayment(body).subscribe({
         next: response => {
           console.log('Pago exitoso', response);
           localStorage.setItem('paymentResponse', JSON.stringify(response)); 

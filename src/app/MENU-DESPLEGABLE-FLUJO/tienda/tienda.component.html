@@ -2,7 +2,7 @@
     <div class="shop-container" *ngIf="products.length > 0; else emptyShop">
       <button class="back-button" (click)="goBack()">&#8592;</button>
       <button class="close-button" (click)="close()">&#10005;</button>
-      <h2>Tienda</h2>
+      <h2>Carrito</h2>
       
       <div class="product" *ngFor="let product of products">
         <div class="product-details">
@@ -33,7 +33,7 @@
       <div class="empty-shop">
         <button class="back-button" (click)="goBack()">&#8592;</button>
         <button class="close-button" (click)="close()">&#10005;</button>
-        <h2>Tienda</h2>
+        <h2>Agrega Productos</h2>
         <div class="empty-shop">
           <img src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717899990/Carrera%20Por%20La%20Vida%20Client/4598559_z56cwx.png" alt="Empty shop icon">
           <p>Añade productos especializados para tu equipamiento</p>

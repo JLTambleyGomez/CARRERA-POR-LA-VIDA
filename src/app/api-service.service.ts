@@ -15,7 +15,7 @@ export class ApiService {
 
   manualdisconnect: boolean = false;
   // apiUrl: string = "http://localhost:8000";
-  apiUrl: string = "https://api.lacarreraporlavida.com/";
+  apiUrl: string = "https://api.lacarreraporlavida.com";
   getHeader() {
     const lstoken = this.getAuthToken();
     return new HttpHeaders({
@@ -32,6 +32,12 @@ export class ApiService {
     }
   }
 
+  //WompiPayment
+  wompiPayment(data:any): Observable<any> {
+    const header = this.getHeader();
+
+    return this.http.post<any>(`${this.apiUrl}/api/payments/wompi`,data,{ headers: header })
+  }
   //Mail
 
     sendMail(mailData: any): Observable<any> {

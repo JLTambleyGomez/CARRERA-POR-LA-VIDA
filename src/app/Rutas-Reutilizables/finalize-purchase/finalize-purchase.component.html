@@ -23,12 +23,10 @@
         {{ item.description }} : {{ item.amount | currency }}
       </li>
     </ul>
-    <p>{{ discountDetails }}</p>
 
     <h2>Resumen de la compra</h2>
     <ul>
       <li>Subtotal: {{ subtotal | currency }}</li>
-      <li>Descuento por donación: -{{ donationAmount | currency }}</li>
       <li>Total: {{ total | currency }}</li>
     </ul>
 
