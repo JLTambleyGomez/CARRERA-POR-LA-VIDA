@@ -1,63 +1,65 @@
 <div>
-    <img (click)="handleShowMenu()" class="e-menu" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717093312/Carrera%20Por%20La%20Vida%20Client/menu-svgrepo-com_phttj8.svg" />
-  </div>
-  
-  <div *ngIf="showMenu" class="e-menu-overlay">
-    <div class="e-menu-contain">
-      <div class="e-m-subcontain">
-        <div class="e-m-user">
-          <img class="e-m-img" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717105112/Carrera%20Por%20La%20Vida%20Client/acceso_liqq3v.png" />
-          <div class="e-m-greet">
-            <span>Hola, Carlos Sanchez</span>
-          </div>
-          <div class="e-m-salir" (click)="redirectTo('/logout')">
-            <p>Salir</p>
-            <img class="e-m-leave" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717106505/Carrera%20Por%20La%20Vida%20Client/cerrar-sesion_fvl4nr.png" />
-          </div>
+  <img (click)="handleShowMenu()" class="e-menu" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717093312/Carrera%20Por%20La%20Vida%20Client/menu-svgrepo-com_phttj8.svg" />
+</div>
+
+<div *ngIf="showMenu" class="e-menu-overlay">
+  <div class="e-menu-contain">
+    <div class="e-m-subcontain">
+      <div class="e-m-user">
+        <img class="e-m-img" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717105112/Carrera%20Por%20La%20Vida%20Client/acceso_liqq3v.png" />
+        <div class="e-m-greet">
+          <span *ngIf="user; else loginTemplate">Hola, {{ user.name }}   -</span>
+          <ng-template #loginTemplate>
+            <span (click)="redirectTo('/login')">Iniciar sesión</span>
+          </ng-template>
         </div>
-        <div class="e-m-list">
-          <span class="e-m-list-span" (click)="redirectTo('/mi-cuenta')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152214/Carrera%20Por%20La%20Vida%20Client/1946429_amibdp.png" />
-            Mi cuenta
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/tienda')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152187/Carrera%20Por%20La%20Vida%20Client/126122_alo6op.png" />
-            Tienda
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/mis-compras')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152329/Carrera%20Por%20La%20Vida%20Client/102665_ryaqxr.png" />
-            Mis Compras
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/alojamiento-hoteleria')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152387/Carrera%20Por%20La%20Vida%20Client/5273266_fjxgsq.png" />
-            Alojamiento-Hoteleria
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/entrenamiento-calorias')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152478/Carrera%20Por%20La%20Vida%20Client/4910753_vaj1a6.png" />
-            Entrenamiento
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/carrera')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152532/Carrera%20Por%20La%20Vida%20Client/8071877_hivqdj.png" />
-            Carrera
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/premiacion')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152547/Carrera%20Por%20La%20Vida%20Client/8071887_tp2md4.png" />
-            Premiación
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/recomendaciones')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152607/Carrera%20Por%20La%20Vida%20Client/3382714_aweuyy.png" />
-            Recomendaciones
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/comunidad-social')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152720/Carrera%20Por%20La%20Vida%20Client/4086231_uznldk.png" />
-            Comunidad Social
-          </span>
-          <span class="e-m-list-span" (click)="redirectTo('/siembra')">
-            <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152753/Carrera%20Por%20La%20Vida%20Client/3791220_vilc2i.png" />
-            Siembra
-          </span>
+        <div class="e-m-salir" *ngIf="user" (click)="redirectTo('/logout')">
+          <p>Salir</p>
+          <img class="e-m-leave" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717106505/Carrera%20Por%20La%20Vida%20Client/cerrar-sesion_fvl4nr.png" />
         </div>
+      </div>
+      <div class="e-m-list">
+        <span class="e-m-list-span" (click)="redirectTo('/mi-cuenta')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152214/Carrera%20Por%20La%20Vida%20Client/1946429_amibdp.png" />
+          Mi cuenta
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/store')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152187/Carrera%20Por%20La%20Vida%20Client/126122_alo6op.png" />
+          Tienda
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/mis-compras')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152329/Carrera%20Por%20La%20Vida%20Client/102665_ryaqxr.png" />
+          Mis Compras
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/alojamiento-hoteleria')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152387/Carrera%20Por%20La%20Vida%20Client/5273266_fjxgsq.png" />
+          Alojamiento-Hoteleria
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/entrenamiento-calorias')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152478/Carrera%20Por%20La%20Vida%20Client/4910753_vaj1a6.png" />
+          Entrenamiento
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/carrera')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152532/Carrera%20Por%20La%20Vida%20Client/8071877_hivqdj.png" />
+          Carrera
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/premiacion')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152547/Carrera%20Por%20La%20Vida%20Client/8071887_tp2md4.png" />
+          Premiación
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/recomendaciones')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152607/Carrera%20Por%20La%20Vida%20Client/3382714_aweuyy.png" />
+          Recomendaciones
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/comunidad-social')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152720/Carrera%20Por%20La%20Vida%20Client/4086231_uznldk.png" />
+          Comunidad Social
+        </span>
+        <span class="e-m-list-span" (click)="redirectTo('/siembra')">
+          <img class="em-list" src="https://res.cloudinary.com/dzlgt5j3g/image/upload/v1717152753/Carrera%20Por%20La%20Vida%20Client/3791220_vilc2i.png" />
+          Siembra
+        </span>
       </div>
     </div>
   </div>
-  
+</div>

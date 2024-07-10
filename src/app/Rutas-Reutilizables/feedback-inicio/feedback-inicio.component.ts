@@ -13,6 +13,17 @@ export class FeedbackInicioComponent {
   constructor(private router: Router) {}
 
   closeFeedback() {
-    this.router.navigate(['/finalize-purchase']);
+    const from = localStorage.getItem('loginfrom') 
+    console.log(from)
+
+    if (from=="solo-corredor"){
+      this.router.navigate(['/inscripcion-corredor']);
+      localStorage.removeItem('loginfrom');
+    }
+      if(!from){
+        this.router.navigateByUrl("/")
+      }
+
   }
+ 
 }

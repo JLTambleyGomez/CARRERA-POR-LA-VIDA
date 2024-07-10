@@ -2,6 +2,7 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
+  margin-top: 6%;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -10,6 +11,7 @@
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 23px;
 }
 
 .tabs {
@@ -37,6 +39,8 @@ h1 {
 
 h2 {
   margin-bottom: 10px;
+  font-size: 20px;
+
 }
 
 ul {

@@ -1,7 +1,7 @@
 .container {
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  margin-top:7%;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #fff;
@@ -95,8 +95,9 @@
 
 @media only screen and (max-width: 768px) {
   .container {
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 350px;
+    margin-top: 16%;
 
   }
   .header h2 {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -10,17 +10,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './finalize-purchase.component.html',
   styleUrls: ['./finalize-purchase.component.css']
 })
-export class FinalizePurchaseComponent {
-  participantDetails = {
-    name: 'Carlos Sanchez',
-    id: 'Cédula 1049409421',
-  };
+export class FinalizePurchaseComponent implements OnInit {
+
+  user:any={}
+  inscription:any={}
+  kitdeportivo:any={}
 
   purchaseDetails = [
     { description: 'Inscripción 7K', amount: 42000 },
-    { description: 'Camiseta', amount: 45000, size: 'Talla L' },
-    { description: 'Visera', amount: 30000 },
-    { description: 'Pañuelo', amount: 15000 },
+
   ];
 
   discountDetails = 'Obtén un 20% de descuento en la inscripción donando sangre';
@@ -35,6 +33,38 @@ export class FinalizePurchaseComponent {
   }
 
   constructor(private router: Router, private http: HttpClient) {}
+
+
+
+ngOnInit(): void {
+        const storedUser = localStorage.getItem('usuario');
+  if(storedUser){
+    const user = JSON.parse(storedUser);
+
+    this.user=user
+  }
+
+  const storedInscription = localStorage.getItem('inscripcion');
+  if(storedInscription){
+    const inscripcion = JSON.parse(storedInscription);
+
+    this.inscription=inscripcion
+  }
+
+  const storedKit = localStorage.getItem('kitDeportivo');
+  if(storedKit){
+    const kit = JSON.parse(storedKit);
+
+    this.kitdeportivo=kit
+  }
+
+}
+
+
+
+
+
+
 
   cancel() {
     this.router.navigate(['/']);

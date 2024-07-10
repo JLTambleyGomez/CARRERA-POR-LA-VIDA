@@ -27,3 +27,12 @@
   cursor: pointer;
   text-decoration: underline; 
 }
+@media only screen and (max-width: 768px) {
+  .e-options {
+    font-size: 12px;
+    margin-left: -20px;
+  }
+  .cart-fill{
+  margin-top: 5px;}
+
+  }

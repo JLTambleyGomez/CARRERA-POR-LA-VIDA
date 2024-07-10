@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../../api-service.service';
+
 
 @Component({
   selector: 'app-datos-del-participante',
@@ -22,8 +23,8 @@ export class DatosDelParticipanteComponent implements OnInit {
   filteredCities: any[] = [];
 
   constructor(
-    private http: HttpClient,
     private fb: FormBuilder,
+    private apiservice:ApiService,
     private router: Router) {
     this.participanteForm = this.fb.group({
       name: ['', Validators.required],
@@ -67,7 +68,7 @@ export class DatosDelParticipanteComponent implements OnInit {
     });
 
     // Cargar departamentos
-    this.http.get('https://lacarreraporlavida.org:8000/api/departments').subscribe({
+    this.apiservice.getDepartments().subscribe({
       next: (response: any) => {
         console.log('departamentos', response);
         this.departaments = response;
@@ -81,7 +82,7 @@ export class DatosDelParticipanteComponent implements OnInit {
     });
 
     // Cargar ciudades
-    this.http.get('https://lacarreraporlavida.org:8000/api/cities').subscribe({
+    this.apiservice.getCities().subscribe({
       next: (response: any) => {
         console.log('ciudades', response);
         this.cities = response;

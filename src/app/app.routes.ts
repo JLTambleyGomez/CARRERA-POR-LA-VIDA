@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { TiendaComponent } from './tienda/tienda.component';
+import { TiendaComponent } from './MENU-DESPLEGABLE-FLUJO/tienda/tienda.component';
 import { EventoComponent } from './LANDING/evento/evento.component';
 import { IncripcionMeInscribireComponent } from './FLUJO-INSCRIPCIÓN-CORREDOR/incripcion-me-inscribire/incripcion-me-inscribire.component';
 import { InscripcionEquipoComponent } from './FLUJO-INSCRIPCION-EQUIPO/inscripcion-equipo/inscripcion-equipo.component';
@@ -44,8 +44,13 @@ import { FormMiInscripcionComponent } from './FLUJO-INSCRIPCION-EQUIPO/form-mi-i
 import { MiCuentaComponent } from './MENU-DESPLEGABLE-FLUJO/mi-cuenta/mi-cuenta.component';
 import { AlojamientoHoteleriaDetalleComponent } from './MENU-DESPLEGABLE-FLUJO/alojamiento-hoteleria-detalle/alojamiento-hoteleria-detalle.component';
 import { ActividadDetalleComponent } from './MENU-DESPLEGABLE-FLUJO/actividad-detalle/actividad-detalle.component';
-
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 export const routes: Routes = [
+
+    //admin panel
+    {path: 'admin-panel', component: AdminPanelComponent},
+
+
 
     //Flujo corredor-solo
     {path: 'subscribe-me', component: IncripcionMeInscribireComponent },
@@ -86,15 +91,15 @@ export const routes: Routes = [
     { path: 'actividad-detalle/:activityName', component: ActividadDetalleComponent },
     { path: 'entrenamiento-calorias', component: EntrenamientoCaloriasComponent },
     { path: 'entrenamiento-objetivos', component: EntrenamientoObjetivoComponent },
-
-
-
-
-
-
-
-
     { path: 'store', component: TiendaComponent },
+
+
+
+
+
+
+
+
     { path: '', component: EventoComponent },
     { path: 'subscribe-ce', component: InscriptionInscribeCeComponent },
     {path:"Recorrido", component:RecorridoComponent},

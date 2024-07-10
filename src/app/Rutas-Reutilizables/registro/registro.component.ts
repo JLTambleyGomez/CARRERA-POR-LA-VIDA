@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../api-service.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -13,7 +15,7 @@ import { CommonModule } from '@angular/common';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private apiservice: ApiService,private router: Router) {
     this.registerForm = this.fb.group({
       name: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -46,19 +48,18 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     console.log("submit")
     if (true) {
-      alert("register")
-      this.http.post('http://lacarreraporlavida.org:8000/api/users', this.registerForm.value).subscribe({
+      this.apiservice.createUser(this.registerForm.value).subscribe({
         next: response => {
           console.log('Registro exitoso', response);
-          // Manejar la respuesta del backend
+
         },
         error: error => {
           console.error('Error en el registro', error);
           alert("error-sin-conexion-api")
-          // Manejar el error del backend
         },
         complete: () => {
           console.log('Solicitud de registro completada');
+          this.router.navigateByUrl("/login")
         }
       });
     }else console.log("formInvalido")

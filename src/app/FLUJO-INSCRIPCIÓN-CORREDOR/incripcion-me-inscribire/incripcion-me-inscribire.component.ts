@@ -1,7 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
-
+import { ApiService } from '../../api-service.service';
+import { ignoreElements } from 'rxjs';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class IncripcionMeInscribireComponent implements OnInit {
   
-  constructor(private router:Router){}
+  constructor(private router:Router,private apiService:ApiService){}
   
   currentUrl=""
   
@@ -43,7 +44,39 @@ export class IncripcionMeInscribireComponent implements OnInit {
     }
   
     localStorage.setItem('inscripcion', JSON.stringify(inscripcion));
-    this.router.navigateByUrl("/inscripcion-corredor");
+    localStorage.setItem('loginfrom',"solo-corredor");
+
+
+    const userStr = localStorage.getItem("usuario");
+    if (userStr) {
+      try {
+        const user = JSON.parse(userStr);
+        console.log(user.userId)
+        if (user && user.userId) {
+          this.apiService.getUserById(user.userId).subscribe({
+            next: response => {
+              if(response.userId){
+                this.router.navigateByUrl("/inscripcion-corredor")
+              }
+            },
+            error: error => {
+              console.error('Error en el inicio de sesión', error);
+              this.router.navigateByUrl("/login");
+
+            },
+            complete: () => {
+              console.log('Solicitud de inicio de sesión completada');
+            }
+          });
+
+    
+        }
+      } catch (error) {
+        console.error("Error parsing user JSON:", error);
+      }
+    }
+    else{    this.router.navigateByUrl("/login");
+  }
   }
   
 
@@ -58,9 +91,13 @@ export class IncripcionMeInscribireComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.url;
       }
-      
     });
+  
+   
   }
+  
+
+
 
 
 }

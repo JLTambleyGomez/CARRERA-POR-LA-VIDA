@@ -106,8 +106,8 @@
 }
 @media only screen and (max-width: 768px) {
     .e-d-description{
-        line-height: 15px;
-        font-size: 80%;
+        line-height: 12px;
+        font-size: 65%;
     }
     .e-i-img {
         width: 75%;

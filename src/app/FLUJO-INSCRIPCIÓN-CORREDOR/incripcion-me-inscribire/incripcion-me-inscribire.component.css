@@ -1,7 +1,7 @@
 .sub-me {
-    margin-top: 5%;    
+    margin-top: 7%;    
     font-size: 20px;
-
+    
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@
     margin: 20px 0;
 }
 .img-recorrido{
-    width: 800px;
+    width: 400px;
 }
 
 .sub-medals {
@@ -117,7 +117,8 @@
 }
 @media only screen and (max-width: 768px) {
 
-    .sub-me {    max-width: 600px;}
+    .sub-me {    max-width: 400px;
+    margin-top: 16%;}
     .img-recorrido{
         width: 300px;
     }

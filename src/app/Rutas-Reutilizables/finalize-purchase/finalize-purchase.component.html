@@ -9,13 +9,18 @@
 
   <div class="purchase-summary">
     <h2>Datos del participante</h2>
-    <p>Nombre: {{ participantDetails.name }}</p>
-    <p>Cédula: {{ participantDetails.id }}</p>
+    <p>Nombre: {{ user.name }} {{user.lastName}}  </p>
+    <p>Email: {{ user.email }}</p>
 
     <h2>Detalle de la compra</h2>
     <ul>
+      <p>inscripción: {{ inscription.distancia }} kilómetros</p>
+      <p>kit deportivo: {{ kitdeportivo.gender }} {{ kitdeportivo.size }} (incluído)</p>
+
+
+
       <li *ngFor="let item of purchaseDetails">
-        {{ item.description }} {{ item.size ? '(' + item.size + ')' : '' }}: {{ item.amount | currency }}
+        {{ item.description }} : {{ item.amount | currency }}
       </li>
     </ul>
     <p>{{ discountDetails }}</p>

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   selector: 'app-form-de-inscrip-corredor',
   templateUrl: './form-de-inscrip-corredor.component.html',
   styleUrls: ['./form-de-inscrip-corredor.component.css']
@@ -16,6 +17,7 @@ export class FormDeInscripCorredorComponent implements OnInit {
   kitDeportivo: any;
   preguntasDePatrocinadores: any;
   productosOpcionales: any;
+  codigoVendedor: string = '';
   isFormComplete: boolean = false;
 
   constructor(private router: Router) {}
@@ -45,6 +47,7 @@ export class FormDeInscripCorredorComponent implements OnInit {
     this.kitDeportivo = ls.kitDeportivo;
     this.preguntasDePatrocinadores = ls.preguntasDePatrocinadores;
     this.productosOpcionales = ls.productosOpcionales;
+    this.codigoVendedor = ls.codigoVendedor || '';
     return ls;
   }
 
@@ -76,9 +79,17 @@ export class FormDeInscripCorredorComponent implements OnInit {
     this.router.navigateByUrl("/Preguntas-Patrocinadores");
   }
 
+  updateCodigoVendedor(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.codigoVendedor = input.value;
+    const inscripcion = JSON.parse(localStorage.getItem('inscripcion') || '{}');
+    inscripcion.codigoVendedor = this.codigoVendedor;
+    localStorage.setItem('inscripcion', JSON.stringify(inscripcion));
+  }
+
   continueWithPayment() {
     if (this.isFormComplete) {
-      this.router.navigateByUrl("/login");
+      this.router.navigateByUrl("/finalize-purchase");
     }
   }
 }

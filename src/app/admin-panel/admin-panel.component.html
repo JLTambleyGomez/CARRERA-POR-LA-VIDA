@@ -1,0 +1,81 @@
+<div class="admin-panel ">
+    <h1>Admin Panel</h1>
+  
+    <!-- Users -->
+    <h2>Users</h2>
+    <button (click)="loadUsers()">Load Users</button>
+    <button (click)="searchUserById('some-id')">Search User By ID</button>
+    <button (click)="updateUser('some-id', {name: 'New Name'})">Update User</button>
+  
+    <ul>
+      <li *ngFor="let user of users">{{ user.name }}</li>
+    </ul>
+    <!-- Bookings -->
+    <h2>Bookings</h2>
+    <button (click)="loadBookings()">Load Bookings</button>
+    <button (click)="createBooking({name: 'Booking Name', description: 'Booking Description', image: 'Image URL', address: 'Address', phone: 'Phone', email: 'Email', bookingLink: 'Link'})">Create Booking</button>
+    <button (click)="searchBookingById('some-id')">Search Booking By ID</button>
+    <button (click)="updateBooking('some-id', {name: 'Updated Name', description: 'Updated Description'})">Update Booking</button>
+    <button (click)="deleteBooking('some-id')">Delete Booking</button>
+  
+    <ul>
+      <li *ngFor="let booking of bookings">{{ booking.name }}</li>
+    </ul>
+    <!-- Teams -->
+    <h2>Teams</h2>
+    <button (click)="loadTeams()">Load Teams</button>
+    <button (click)="searchTeamById('some-id')">Search Team By ID</button>
+    <button (click)="updateTeam('some-id', {name: 'New Team Name'})">Update Team</button>
+    <button (click)="deleteTeam('some-id')">Delete Team</button>
+  
+    <ul>
+      <li *ngFor="let team of teams">{{ team.name }}</li>
+    </ul>
+  
+    <!-- Surveys -->
+    <h2>Surveys</h2>
+    <button (click)="loadSurveys()">Load Surveys</button>
+    <button (click)="searchSurveyById('some-id')">Search Survey By ID</button>
+    <button (click)="updateSurvey('some-id', {title: 'New Title'})">Update Survey</button>
+    <button (click)="deleteSurvey('some-id')">Delete Survey</button>
+  
+    <ul>
+      <li *ngFor="let survey of surveys">{{ survey.title }}</li>
+    </ul>
+  
+    <!-- Runners -->
+    <h2>Runners</h2>
+    <button (click)="loadRunners()">Load Runners</button>
+    <button (click)="searchRunnerById('some-id')">Search Runner By ID</button>
+    <button (click)="updateRunner('some-id', {name: 'New Runner Name'})">Update Runner</button>
+    <button (click)="deleteRunner('some-id')">Delete Runner</button>
+  
+    <ul>
+      <li *ngFor="let runner of runners">{{ runner.name }}</li>
+    </ul>
+  
+    <!-- Products -->
+    <h2>Products</h2>
+    <button (click)="loadProducts()">Load Products</button>
+    <button (click)="searchProductById('some-id')">Search Product By ID</button>
+    <button (click)="updateProduct('some-id', {name: 'New Product Name'})">Update Product</button>
+    <button (click)="deleteProduct('some-id')">Delete Product</button>
+  
+    <ul>
+      <li *ngFor="let product of products">{{ product.name }}</li>
+    </ul>
+  
+    <!-- Orders -->
+    <h2>Orders</h2>
+    <button (click)="loadOrders()">Load Orders</button>
+    <button (click)="searchOrderById('some-id')">Search Order By ID</button>
+    <button (click)="updateOrder('some-id', {status: 'New Status'})">Update Order</button>
+    <button (click)="deleteOrder('some-id')">Delete Order</button>
+  
+    <ul>
+      <li *ngFor="let order of orders">{{ order.id }}</li>
+    </ul>
+  
+
+  </div>
+  

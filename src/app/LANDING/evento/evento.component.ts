@@ -18,18 +18,34 @@ constructor(private router:Router){}
 
 currentUrl:string=""
 
+
+
+clearLocalStorageExceptUsuario() {
+  const usuario = localStorage.getItem("usuario");
+  const token= localStorage.getItem("token");
+
+  localStorage.clear();
+  
+  if (usuario !== null&& token!==null) {
+    localStorage.setItem("usuario", usuario);
+    localStorage.setItem("token", token);
+
+  }
+}
+
 handleSubscribe(){
-  localStorage.clear()
+  
+  this.clearLocalStorageExceptUsuario();
   this.router.navigateByUrl('/subscribe-me');
 
 }
 handleSubTeam(){
-  localStorage.clear()
+  this.clearLocalStorageExceptUsuario();
   this.router.navigateByUrl("subscribe-team")
 }
 
 handleSubCe(){
-  localStorage.clear()
+  this.clearLocalStorageExceptUsuario();
   this.router.navigateByUrl("subscribe-ce")
 }
 

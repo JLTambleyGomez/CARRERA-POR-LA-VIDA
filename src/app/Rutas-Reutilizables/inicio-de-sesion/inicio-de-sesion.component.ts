@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SocialAuthService, SocialUser, GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ApiService } from '../../api-service.service';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -23,7 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private http: HttpClient,
+    private apiservice: ApiService,
     private authService: SocialAuthService
   ) {
     this.loginForm = this.fb.group({
@@ -54,7 +53,6 @@ export class LoginComponent implements OnInit {
   handleRegister(){
     this.router.navigateByUrl("/register")
   }
-
   feedbackInicio(){
     this.router.navigateByUrl("/feedback-inicio")
   }
@@ -62,11 +60,12 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     if (this.loginForm.valid) {
       const loginData = this.loginForm.value;
-      console.log(loginData);
-      this.http.post('http://lacarreraporlavida.org:8000/api/auth/login', loginData).subscribe({
+      this.apiservice.authUser(loginData).subscribe({
         next: response => {
           console.log('Inicio de sesión exitoso', response);
-          localStorage.setItem('usuario', JSON.stringify(response)); 
+          localStorage.setItem('usuario', JSON.stringify(response.userToken)); 
+          localStorage.setItem('token', JSON.stringify(response.token)); 
+
           this.feedbackInicio();
         },
         error: error => {
