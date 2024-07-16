@@ -13,9 +13,8 @@ export class ApiService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  manualdisconnect: boolean = false;
-  // apiUrl: string = "http://localhost:8000";
-  apiUrl: string = "https://api.lacarreraporlavida.com";
+  // // apiUrl: string = "http://localhost:8000";
+  apiUrl: string = "https://lacarreraporlavida.com";
   getHeader() {
     const lstoken = this.getAuthToken();
     return new HttpHeaders({
@@ -105,7 +104,6 @@ export class ApiService {
     localStorage.clear();
     this.userSubject.next(null);
     this.router.navigateByUrl('/');
-    this.manualdisconnect = true;
     return this.user$;
   }
   getCities(): Observable<any> {

@@ -90,6 +90,10 @@ export class ProductosComponent implements OnInit {
   }
 
   handleTienda(): void {
+    const from =localStorage.getItem('loginfrom')
+    console.log(from)
+    if(from==="store"){this.router.navigateByUrl("/store")}
+    else
     this.router.navigateByUrl("/tienda-vi");
   }
 

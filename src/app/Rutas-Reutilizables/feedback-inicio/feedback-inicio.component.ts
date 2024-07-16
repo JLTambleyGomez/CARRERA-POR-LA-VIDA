@@ -20,7 +20,7 @@ export class FeedbackInicioComponent {
       this.router.navigate(['/inscripcion-corredor']);
       localStorage.removeItem('loginfrom');
     }
-      if(!from){
+      if(from=="from-menu"){
         this.router.navigateByUrl("/")
       }
 

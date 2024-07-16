@@ -78,12 +78,13 @@ export class TiendaComponent implements OnInit {
   }
 
   checkout(): void {
-    localStorage.setItem('loginfrom',"store");
 
     this.inscription();
   }
 
   additems(): void {
+    localStorage.setItem('loginfrom',"store");
+
     this.router.navigateByUrl("/productos");
   }
 
